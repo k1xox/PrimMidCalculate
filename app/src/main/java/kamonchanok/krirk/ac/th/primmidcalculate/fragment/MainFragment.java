@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import kamonchanok.krirk.ac.th.primmidcalculate.R;
 
@@ -14,6 +15,32 @@ import kamonchanok.krirk.ac.th.primmidcalculate.R;
  */
 
 public class MainFragment extends Fragment{
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+
+        //Calculate Controller
+        calculateController();
+
+    }
+
+
+    private void calculateController(){
+        Button button = getView().findViewById(R.id.btncalculate);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentMainFragment,new CalculateFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -21,4 +48,4 @@ public class MainFragment extends Fragment{
 
         return view ;
     }
-}
+} //main class
