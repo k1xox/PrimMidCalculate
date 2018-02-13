@@ -50,8 +50,8 @@
         android:id="@+id/btnCalculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="21dp"
-        android:text="Exchange" />
+        android:text="Exchange"
+        android:textSize="21dp" />
 
     <!--Name-->
     <TextView
@@ -62,7 +62,7 @@
         android:text="Toase Answer in THB"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
-        android:textStyle="bold"   />
+        android:textStyle="bold" />
 
 
 

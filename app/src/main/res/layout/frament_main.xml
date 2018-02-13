@@ -12,7 +12,7 @@
     <!--Content-->
     <LinearLayout
 
-        android:background="#DCDCDC"
+        android:background="#73dcdcdc"
         android:padding="@dimen/padding"
         android:layout_margin="@dimen/margin"
         android:orientation="vertical"
@@ -50,6 +50,7 @@
 
         <!--Calculate Button-->
         <Button
+
             android:id="@+id/btncalculate"
             android:text="Calculate"
             android:layout_width="match_parent"
